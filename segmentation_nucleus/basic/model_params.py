@@ -13,22 +13,15 @@ class BasicSegmentationModelParams(ModelParams):
         self.dimensions = Dimensions(height=None, width=None)
         self.input_dimensions = Dimensions(height=512, width=512)
 
-        self.split = DataSplit(
-            # train_ratio=1.0,
-            # test_ratio=0.0,
-            dataset_split_folder=(
-                r"C:\Users\thoma\data\Data Maxence\Data set 1\data set split\split_1"
-            ),
-        )
+        self.split = DataSplit(train_ratio=0.8, validation_ratio=0.1, test_ratio=0.1,)
 
         self.beta1 = 0.9
         self.beta2 = 0.999
 
-        self.num_epochs = 100
-        self.batch_size = 2
+        self.num_epochs = 1000
+        self.batch_size = 10
         self.learning_rate = 0.01
 
-        self.data_dir = r"C:\Users\thoma\data\Data Maxence\Data set 1\tiff"
+        self.data_dir = ""
 
-        self.model_load_path = r"C:\Users\thoma\top models\20220506-103351-segmentation_1.pt"
-
+        self.model_load_path = ""

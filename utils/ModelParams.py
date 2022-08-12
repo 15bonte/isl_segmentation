@@ -31,21 +31,14 @@ class ModelParams:
         self.n_sub_images = 5
 
         # Ratios to split data set
-        self.split = DataSplit(
-            train_ratio=0.8,
-            validation_ratio=0.1,
-            test_ratio=0.1,
-            # dataset_split_folder=(
-            #     r"C:\Users\thoma\data\Data Maxence\Data set 2\data set split cell\split_1"
-            # ),
-        )
+        self.split = DataSplit(train_ratio=0.8, validation_ratio=0.1, test_ratio=0.1,)
 
         # Adam optimizer
         self.beta1 = 0.5
         self.beta2 = 0.999
 
         # Training parameters
-        self.num_epochs = 50
+        self.num_epochs = 1000
         self.batch_size = 10
         self.learning_rate = 0.1
 
@@ -53,13 +46,13 @@ class ModelParams:
         self.data_dir = ""
 
         # Tensorboard parameters
-        self.tensorboard_folder_path = r"C:\Users\thoma\tensorboard\local"
+        self.tensorboard_folder_path = ""
         self.plot_step = 10
 
         # Output folders - models & predictions
-        self.models_folder = r"C:\Users\thoma\models\local"
+        self.models_folder = ""
         self.model_save_name = f"{self.name}.pt"
-        self.output_dir = r"C:\Users\thoma\predictions\local"
+        self.output_dir = ""
 
         # Path to load model to predict
         self.model_load_path = ""

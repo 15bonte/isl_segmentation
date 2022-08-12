@@ -19,16 +19,14 @@ class BasicCellSegmentationModelParams(ModelParams):
         self.beta2 = 0.999
 
         self.num_epochs = 1000
-        self.batch_size = 2
+        self.batch_size = 10
         self.learning_rate = 0.01
 
         self.loss_balance = 1
 
-        self.data_dir = r"C:\Users\thoma\data\Data Maxence\Data set 2\tiff"
+        self.data_dir = ""
 
-        self.model_load_path = (
-            r"C:\Users\thoma\models\20220705-193343\basic_topology_cell_segmentation.pt"
-        )
+        self.model_load_path = ""
 
     def update(self, args):
         super().update(args)

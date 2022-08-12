@@ -13,32 +13,23 @@ class TransferCellSegmentationModelParams(ModelParams):
         self.dimensions = Dimensions(height=None, width=None)
         self.input_dimensions = Dimensions(height=512, width=512)
 
-        self.split = DataSplit(
-            # train_ratio=0.8,
-            # validation_ratio=0.1,
-            # test_ratio=0.1,
-            dataset_split_folder=(
-                r"C:\Users\thoma\data\Data Maxence\Data set 2\data set split cell\split_1"
-            ),
-        )
+        self.split = DataSplit(train_ratio=0.8, validation_ratio=0.1, test_ratio=0.1,)
 
         self.beta1 = 0.9
         self.beta2 = 0.999
 
         self.num_epochs = 1000
-        self.batch_size = 2
+        self.batch_size = 10
         self.learning_rate = 0.01
 
         self.loss_balance = 1
 
-        self.data_dir = r"C:\Users\thoma\data\Data Maxence\Data set 2\tiff"
+        self.data_dir = ""
 
-        self.model_load_path = (
-            r"C:\Users\thoma\models\20220706-105431\transfer_topology_cell_segmentation.pt"
-        )
+        self.model_load_path = ""
 
-        # Path to Maxence trained model
-        self.model_pretrained_path = r"C:\Users\thoma\models\20220628-171544\cy5.pt"
+        # Path to Cy5 trained model
+        self.model_pretrained_path = ""
 
     def update(self, args):
         super().update(args)
